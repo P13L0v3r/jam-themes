@@ -8,11 +8,16 @@ app.get("/", (req, res) => {
   const now = new Date();
 
   if (now < UNLOCK_DATE) {
+    const themes = process.env.JAM_THEMES.split(",");
+    const ulHtml = `<ul>
+      ${themes.map((item) => `<li>${item}</li>`).join("\n")}
+      </ul>`;
     res.send(`
       <html>
         <body style="font-family:Arial; background-color:#150e20; color:#c8d2f3;">
           <h2>The 1:1 Jam themes have not been revealed yet!</h2>
           <p>Come back when the jame starts!</p>
+          ${ulHtml}
         </body>
       </html>
     `);
