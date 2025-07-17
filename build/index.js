@@ -18,7 +18,7 @@ app.get("/", (req, res) => {
           <h2>The 1:1 Jam themes have not been revealed yet!</h2>
           <p>The themes will look something like this:</p>
           ${ulHtml}
-          <p>Come back when the jame starts!</p>
+          <p>Come back when the jam starts!</p>
         </body>
       </html>
     `);
