@@ -8,7 +8,7 @@ app.get("/", (req, res) => {
   const now = new Date();
 
   if (now < UNLOCK_DATE) {
-    const themes = process.env.JAM_THEMES.split(",");
+    const themes = process.env.TEST_THEMES.split(",");
     const ulHtml = `<ul>
       ${themes.map((item) => `<li>${item}</li>`).join("\n")}
       </ul>`;
